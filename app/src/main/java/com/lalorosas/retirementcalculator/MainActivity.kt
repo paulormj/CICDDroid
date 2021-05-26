@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
              if (idadeAposentar <= idadeAtual) {
                  Analytics.trackEvent("idade_errada",properties);
              }
+             resultTextView.text = "At the current rate of  $taxaDeJuros, saving \$$aplicacaoMensal a month"
 
          }catch (ex: Exception){
              Analytics.trackEvent(ex.message);
