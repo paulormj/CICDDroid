@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //UPdate Secret
         AppCenter.start(application, "d7672144-5299-4b9d-abbe-c55e69a90456", Analytics::class.java, Crashes::class.java);
 
         calculateButton.setOnClickListener {
