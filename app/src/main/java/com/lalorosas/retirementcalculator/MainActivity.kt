@@ -14,7 +14,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        AppCenter.start(application, "6ea11f14-e195-449a-8559-bca4ec3727e5", Analytics::class.java, Crashes::class.java);
+        //UPdate Secret
+        AppCenter.start(application, "d7672144-5299-4b9d-abbe-c55e69a90456", Analytics::class.java, Crashes::class.java);
 
         calculateButton.setOnClickListener {
             //throw Exception("Algo deu errado");
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
              if (idadeAposentar <= idadeAtual) {
                  Analytics.trackEvent("idade_errada",properties);
              }
+             resultTextView.text = "At the current rate of  $taxaDeJuros, saving \$$aplicacaoMensal a month"
 
          }catch (ex: Exception){
              Analytics.trackEvent(ex.message);
